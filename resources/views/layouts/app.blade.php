@@ -32,16 +32,24 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+
+                    @if (Route::has('login'))
+                    @auth
                     <ul class="navbar-nav mr-auto">
+                        @role ('user|Admin|admingudang|adminsuplier')
                         <li class="nav-item">
                             <a class="nav-link" href="">PB |Permintaan Barang</a>
                         </li>
                          <li class="nav-item">
                             <a class="nav-link" href="{{route('home')}}">Home</a>
                         </li>
+                        @endrole
+                        @role ('user')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('backend.user.cekbarang.index') }}">Cek Barang</a>
                         </li>
+                        @endrole
+                        @role ('Admin|admingudang|adminsuplier')
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('backend.admin.dashboard.index')}}">Dashboard</a>
                         </li>
@@ -54,7 +62,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('backend.admin.request.index')}}">Request</a>
                         </li>
+                        @endrole
+                        @endauth
                     </ul>
+                    @endif
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -71,15 +82,19 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <img src="{{asset('img/009r3g5yidqx_lthwt8.jpg')}}" class="rounded-circle" width="30" height="30" alt="">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{Route('backend.admin.member.invite.index')}}">Invite Member</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
+
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf

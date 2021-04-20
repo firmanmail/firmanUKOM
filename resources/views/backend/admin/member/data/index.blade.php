@@ -1,17 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
- <div class="d-flex hd-cheatsheet container-fluid bg-body">
+<div class="d-flex hd-cheatsheet container-fluid bg-body">
     <div class="col-md-2" style="margin-top: -28px;">
         <section id="content">
             <h6 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3 text-center" style="margin-left: 200px;">Suplier</h6>
 
             <article>
                 <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2 text-center">
-                    <img src="{{ asset('img/f1b3ed59c5e7d2d3046a32c2110fb57a.jpg') }}" class="rounded-circle" width="80px" height="80" alt="">
-                    <p class="font-weight-bold text-center pt-2">Taylor Otwel</p>
+                    <img src="{{ asset('img/Mengintip-Gaya-Kepemimpinan-Steve-Jobs-yang-Unik-dan-Inspiratif.jpg') }}" class="rounded-circle" width="80px" height="80" alt="">
+                    <p class="font-weight-bold text-center pt-2">Steve Jobs</p>
                 </div>
-                    <p class="text-muted text-center" style="margin-top: -15px;">taylorotwel@gmail.com
+                    <p class="text-muted text-center" style="margin-top: -15px;">stevejobs@gmail.com
+                        <a href="#" class="btn btn-primary btn-sm btn-block">Data Member</a>
                     </p>
                         <div class="d-flex justify-content-center" style="margin-top: -20px;">
                         <svg height="48px" viewBox="0 0 48 48" width="25px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" width="34px" fill="none"/><path d="M13.25 21.59c2.88 5.66 7.51 10.29 13.18 13.17l4.4-4.41c.55-.55 1.34-.71 2.03-.49 2.24.74 4.65 1.14 7.14 1.14 1.11 0 2 .89 2 2v7c0 1.11-.89 2-2 2-18.78 0-34-15.22-34-34 0-1.11.9-2 2-2h7c1.11 0 2 .89 2 2 0 2.49.4 4.9 1.14 7.14.22.69.06 1.48-.49 2.03l-4.4 4.42z"/></svg>
@@ -74,34 +75,26 @@
                 <h5 class="text-muted">
                     Request
                 </h5>
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="{{route('backend.admin.request.accept')}}" class="btn btn-dark btn-sm">Accept</a>
-                        <a href="{{route('backend.admin.request.reject')}}" class="btn btn-dark btn-sm">Reject</a>
-                    </div>
-                </div>
+                <a href="{{route('backend.admin.member.data.create')}}" class="btn btn-dark btn-sm">Tambah Member</a>
                 <br>
                 <br>
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Kode Suplier</th>
-                            <th>Kode Barang</th>
-                            <th>Quantity</th>
-                            <th>Status</th>
-                            <th>Options</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>Roles</th>
+                            <th>Option</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>REQ.2021.13</td>
-                            <td>BRQ.2021.13</td>
-                            <td>100</td>
+                            <td>John Doe</td>
+                            <td>Johndoe@gmail.com</td>
+                            <td>Admin</td>
                             <th>
-                                <h5><span class="badge bg-secondary">Waitting</span></h5>
-                            </th>
-                            <th>
-                                <a href=""class="btn btn-dark btn-sm">Details</a>
+                                <a href="{{route('backend.admin.member.data.edit')}}" class="btn btn-success btn-sm">Edit</a>
+                                <a href="" class="btn btn-danger btn-sm">Hapus</a>
                             </th>
                         </tr>
                     </tbody>

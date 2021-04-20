@@ -10,4 +10,8 @@ class StockController extends Controller
     {
         return view('backend.admin.stock.index');
     }
+    public function create()
+    {
+        return view('backend.admin.stock.create');
+    }
 }

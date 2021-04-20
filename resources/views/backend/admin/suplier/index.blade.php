@@ -3,7 +3,7 @@
 @section('content')
   <div class="d-flex hd-cheatsheet container-fluid bg-body">
     <div class="col-md-2" style="margin-top: -28px;">
-        <h6 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3 text-center">admin</h6>
+        <h6 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3 text-center" style="margin-left: 200px;">Admin</h6>
         <section id="content">
 
 
@@ -13,7 +13,7 @@
                     <p class="font-weight-bold text-center pt-2">Steve Jobs</p>
                 </div>
                     <p class="text-muted text-center" style="margin-top: -15px;">stevejobs@gmail.com
-                        <a href="#" class="btn btn-outline-primary btn-sm btn-block">Invite Member</a>
+                        <a href="{{Route('backend.admin.member.data.index')}}" class="btn btn-primary btn-sm btn-block">Data Member</a>
                     </p>
                         <div class="d-flex justify-content-center" style="margin-top: -20px;">
                         <svg height="48px" viewBox="0 0 48 48" width="25px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" width="34px" fill="none"/><path d="M13.25 21.59c2.88 5.66 7.51 10.29 13.18 13.17l4.4-4.41c.55-.55 1.34-.71 2.03-.49 2.24.74 4.65 1.14 7.14 1.14 1.11 0 2 .89 2 2v7c0 1.11-.89 2-2 2-18.78 0-34-15.22-34-34 0-1.11.9-2 2-2h7c1.11 0 2 .89 2 2 0 2.49.4 4.9 1.14 7.14.22.69.06 1.48-.49 2.03l-4.4 4.42z"/></svg>
@@ -29,50 +29,55 @@
 
 
     <div class="container">
-        <div class="row">
+        <div class="pt-3">
             <div class="col-md-12">
-                <div class="d-flex">
-                </div>
-                <div class="col-md-12">
-            <div class="px-4 py-3">
-                <h5 class="text-muted">
-                    Data Supliers
-                </h5>
-                <div class="row">
-                    <div class="col-md-3 px-3 py-1">
-                    <h6 class="text-muted">Cari Laporan Suplier</h6>
-                        <div class="form-group">
-                            <div class="d-flex">
-                            <input type="text" class="form-control" placeholder>
-                            <br>
-                            <input type="text" class="form-control" placeholder>
-                            </div>
-                        </div>
+                <h3 class="text-dark font-bold">
+                    Data Suplier
+                </h3>
+            </div>
+            <div class="card-body">
+                <h5 class="text-muted">Cari Laporan Suplier</h5>
+                <div class="form-row pt-2">
+                    <div class="form-group col-md-3">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="text" class="form-control">
                     </div>
                 </div>
-            <br>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Kode Suplier</th>
-                            <th>Nama Barang</th>
-                            <th>Quantity</th>
-                            <th>Tanggal Masuk</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>BRG.2021.13</td>
-                            <td>Gitar Yamaha g-50</td>
-                            <td>100</td>
-                            <td>04/03/21</td>
-                            <th>
-                            </th>
-                        </tr>
-                    </tbody>
-                </table>
+                <a href="" class="btn btn-dark btn-sm">Cari Laporan</a>
+                <a href="{{route('backend.admin.stock.create')}}" class="btn btn-dark btn-sm">Tambah Stock</a>
             </div>
-        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-flex">
+                        </div>
+                        <div class="col-md-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Kode Suplier</th>
+                                    <th>Nama Suplier</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>SUP.2021.13</td>
+                                    <td>PT. Yamaha Indonesia</td>
+                                    <td>yamahaindonesia@gmail.com</td>
+                                    <td>+62 xxxxxxxxxx</td>
+                                    <th>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

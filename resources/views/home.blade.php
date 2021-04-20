@@ -12,7 +12,8 @@
                     </h3>
                     <br>
                     <br>
-                    <h3 class="text-center text-light">Firman Yoan Ismail</h3>
+                        <h5 class="text-center text-light text-muted">Halo <strong>{{ Auth::user()->name }}</strong>, Anda login sebagai <strong>{{ auth()->user()->roles->first()->name }}</strong>.
+                    </h5>
                 </div>
             </div>
                     @if (session('status'))

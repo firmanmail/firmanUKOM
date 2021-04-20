@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
- <div class="d-flex hd-cheatsheet container-fluid bg-body">
+<div class="d-flex hd-cheatsheet container-fluid bg-body">
     <div class="col-md-2" style="margin-top: -28px;">
         <section id="content">
             <h6 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3 text-center" style="margin-left: 200px;">Suplier</h6>
@@ -76,8 +76,8 @@
                 </h5>
                 <div class="row">
                     <div class="col-md-3">
-                        <a href="{{route('backend.admin.request.accept')}}" class="btn btn-dark btn-sm">Accept</a>
-                        <a href="{{route('backend.admin.request.reject')}}" class="btn btn-dark btn-sm">Reject</a>
+                        <a href="{{route('backend.admin.request.accept')}}" class="btn btn-outline-dark btn-sm">Accept</a>
+                        <a href="{{route('backend.admin.request.reject')}}" class="btn btn-outline-dark btn-sm">Reject</a>
                     </div>
                 </div>
                 <br>
@@ -89,20 +89,15 @@
                             <th>Kode Barang</th>
                             <th>Quantity</th>
                             <th>Status</th>
-                            <th>Options</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>REQ.2021.13</td>
-                            <td>BRQ.2021.13</td>
+                            <td>BRG.2021.13</td>
                             <td>100</td>
+                            <td>Accept</td>
                             <th>
-                                <h5><span class="badge bg-secondary">Waitting</span></h5>
-                            </th>
-                            <th>
-                                <a href=""class="btn btn-dark btn-sm">Details</a>
-                            </th>
                         </tr>
                     </tbody>
                 </table>

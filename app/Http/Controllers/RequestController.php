@@ -10,4 +10,12 @@ class RequestController extends Controller
     {
         return view('backend.admin.request.index');
     }
+    public function accept()
+    {
+        return view('backend.admin.request.accept');
+    }
+    public function reject()
+    {
+        return view('backend.admin.request.reject');
+    }
 }
